@@ -1,0 +1,139 @@
+/* General styling */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    color: white;
+    font-family: League Spartan, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5em;
+    background-color: #1c1d25;
+}
+
+.header h2 {
+    padding-left: 3em;
+}
+
+.header ul {
+    display: flex;
+    gap: 2em;
+    padding-right: 3em;
+    color: rgb(200, 198, 198);
+    font-weight: bold;
+}
+
+.header ul li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.underline-animation {
+    display: inline-block;
+    position: relative;
+}
+  
+.underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #e66465;
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-out;
+}
+  
+.underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* First body section */
+.top-page {
+    background-color: #1c1d25;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5em;
+    padding-left: 10em;
+}
+
+.top-page h1 {
+    font-size: 3rem;
+}
+
+.top-page h3 {
+    font-style: italic;
+}
+
+.top-page button {
+    border-radius: 5px;
+    font-size: 1rem;
+    border: none;
+    padding: 1em 2em;
+    background: linear-gradient(to right, #e66465, #9198e5);
+    color: white;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.top-page button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.top-page button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.top-page button:hover span {
+    padding-right: 25px;
+}
+  
+.top-page button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.icons {
+    display: flex;
+    gap: 1em;
+}
+
+.icons img {
+    width: 2em;
+    height: auto;
+    filter: brightness(75%)
+}
+
+.icons img:hover {
+    cursor: pointer;
+    filter: brightness(150%);
+}
