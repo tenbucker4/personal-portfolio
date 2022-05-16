@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 100vw;
     min-height: 100vh;
@@ -23,6 +27,9 @@ ul {
     align-items: center;
     height: 5em;
     background-color: #1c1d25;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .header h2 {
@@ -68,24 +75,29 @@ ul {
 /* First body section */
 .top-page {
     background-color: #1c1d25;
-    height: 90vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.left {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: 1.5em;
-    padding-left: 10em;
 }
 
-.top-page h1 {
+.left h1 {
     font-size: 3rem;
 }
 
-.top-page h3 {
+.left h3 {
     font-style: italic;
 }
 
-.top-page button {
+.left button {
     border-radius: 5px;
     font-size: 1rem;
     border: none;
@@ -97,14 +109,14 @@ ul {
     cursor: pointer;
 }
 
-.top-page button span {
+.left button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
 
-.top-page button span:after {
+.left button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -113,11 +125,11 @@ ul {
     transition: 0.5s;
 }
 
-.top-page button:hover span {
+.left button:hover span {
     padding-right: 25px;
 }
   
-.top-page button:hover span:after {
+.left button:hover span:after {
     opacity: 1;
     right: 0;
 }
@@ -136,4 +148,66 @@ ul {
 .icons img:hover {
     cursor: pointer;
     filter: brightness(150%);
+}
+
+.right {
+    background-color: hsla(0,0%,95%,.97);
+    color: #1c1d25;
+    width: 30%;
+    height: fit-content;
+    text-align: justify;
+    padding: 2em 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 10px;;
+}
+
+.right-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right img {
+    width: 2rem;
+    height: auto;
+    align-self: flex-end;
+}
+
+.right h3 {
+    font-size: 1.5rem;
+}
+
+.right button {
+    align-self: flex-start;
+}
+
+/* Projects */
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+    color: #1c1d25;
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+    color: #1c1d25;
+}
+
+/* Contact */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #1c1d25;
+    color: #f3f3f3;
 }
