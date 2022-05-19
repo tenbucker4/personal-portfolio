@@ -13,29 +13,37 @@
 <body>
     <canvas id="canvas1"></canvas>
     <div class="greeting">
-            <h1>Hey, I'm <span style="color: #e66465">Ben</span>.</h1>
+            <h1>Hi, I'm <span style="color: #e66465">Ben</span>.</h1>
             <h2>I'm a frontend web developer.</h2>
-            <button><span>See my work</span></button>
+            <button id="viewWork"><span>See my work</span></button>
             <div class="icons">
                 <img src="./images/github.png" alt="github">
                 <img src="./images/linkedin.png" alt="linkedin">
             </div>
     </div>
-    <div class="nav">
+    <div class="nav" id="nav">
         <ul>
-            <li class="underline-animation">Projects</li>
-            <li class="underline-animation">About Me</li>
-            <li class="underline-animation">Contact</li>
+            <li class="active" id="projectsLink"><a>Projects</a></li>
+            <li id="aboutMeLink"><a>About Me</a></li>
+            <li id="contactMeLink"><a>Contact</a></li>
         </ul>
     </div>
-    <div class="projects">
+    <section id="projects">
         <h1>Projects</h1>
-    </div>
-    <div class="skills">
-        <h1>Skills</h1>
-    </div>
-    <div class="contact">
+    </section>
+    <section id="aboutMe">
+        <h1>About Me</h1>
+    </section>
+    <section id="contactMe">
         <h1>Contact Me</h1>
+    </section>
+    <div class="footer">
+        <button id="toTop">↑</button>
+        <div class="icons">
+            <img src="./images/github.png" alt="github">
+            <img src="./images/linkedin.png" alt="linkedin">
+        </div>
+        <p>Ben Tucker @2022</p>
     </div>
 </body>
 

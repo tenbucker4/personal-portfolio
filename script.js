@@ -1,3 +1,4 @@
+// Super cool particles dancing on page
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
@@ -132,3 +133,54 @@ window.addEventListener('mouseout',
 
 populate();
 animate();
+
+
+// Buttons and stuff!
+const viewWork = document.getElementById('viewWork');
+viewWork.addEventListener('click', function() {
+    document.getElementById('projects').scrollIntoView();
+})
+
+const toTop = document.getElementById("toTop");
+toTop.addEventListener('click', function() {
+    window.scrollTo(0, 0);
+})
+
+const toProjects = document.getElementById('projectsLink');
+toProjects.addEventListener('click', function() {
+    document.getElementById('projects').scrollIntoView();
+})
+
+const toAboutMe = document.getElementById('aboutMeLink');
+toAboutMe.addEventListener('click', function() {
+    document.getElementById('aboutMe').scrollIntoView();
+})
+
+const toContactMe = document.getElementById('contactMeLink');
+toContactMe.addEventListener('click', function() {
+    document.getElementById('contactMe').scrollIntoView();
+})
+
+//Nav bar tracking of current section
+const sections = document.querySelectorAll('section');
+const navLi = document.querySelectorAll('.nav ul li');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+        }
+    })
+
+    navLi.forEach(li => {
+        li.classList.remove('active');
+        if (li.classList.contains(current)) {
+            li.classList.add('active');
+        }
+        console.log(li.classList);
+    })
+
+})
