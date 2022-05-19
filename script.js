@@ -143,8 +143,8 @@ viewWork.addEventListener('click', function() {
     document.getElementById('projects').scrollIntoView();
 })
 
-const toTop = document.getElementById("toTop");
-toTop.addEventListener('click', function() {
+const toHome = document.getElementById('homeLink');
+toHome.addEventListener('click', function() {
     window.scrollTo(0, 0);
 })
 

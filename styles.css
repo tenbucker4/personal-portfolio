@@ -44,10 +44,6 @@ ul a {
     height: 100%;
 }
 
-#body-canvas {
-    height: fit-content;
-}
-
 /* First body section */
 .greeting {
     background-color: #1c1d25;
@@ -114,38 +110,43 @@ ul a {
     font-family: inherit;
     border-radius: 5px;
     font-size: 1rem;
-    border: none;
+    border: 1px solid #e66465;
     padding: 1em 2em;
-    background: linear-gradient(to right, #e66465, #9198e5);
+    background-color: transparent;
     color: white;
     text-align: center;
-    transition: all 0.5s;
     cursor: pointer;
-}
-
-.greeting button span {
-    cursor: pointer;
-    display: inline-block;
+    overflow: hidden;
+    z-index: 1;
     position: relative;
-    transition: 0.5s;
 }
 
-.greeting button span:after {
-    content: '\2193';
+.greeting button::after {
+    content: "";
+    background-color: #e66465;
     position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
+    z-index: -1;
+    padding: 1em 2em;
+    display: block;
 }
 
-.greeting button:hover span {
-    padding-right: 25px;
+button[class^="slide"]::after {
+    transition: all 0.35s;
 }
-  
-.greeting button:hover span:after {
-    opacity: 1;
+
+button[class^="slide"]:hover::after {
+    left: 0;
     right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.35s;
+}
+
+button.slide-from-top::after {
+    left: 0;
+    right: 0;
+    top: -100%;
+    bottom: 100%;
 }
 
 .icons {
@@ -225,6 +226,11 @@ ul li:hover:after {
     color: white;
 }
 
+section h1 {
+    font-size: 2.5rem;
+    text-decoration: underline 4px solid #e66465;
+}
+
 /* About Me */
 #aboutMe {
     display: flex;
@@ -238,11 +244,83 @@ ul li:hover:after {
 /* Contact */
 #contactMe {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    height: 50vh;
+    height: fit-content;
     background-color: #1c1d25;
     color: #f3f3f3;
+    gap: 32px;
+    padding: 96px 0px;
+}
+
+#contactMe p {
+    width: 500px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+form input,
+form textarea {
+    width: 500px;
+    background-color: #2e303d;
+    border: none;
+    resize: none;
+    font-size: 1rem;
+    padding: 0px 8px;
+    font-family: Geneva, sans-serif;
+    outline: none;
+    color: #f3f3f3;
+}
+
+form input {
+    height: 2rem;
+}
+
+form textarea {
+    height: 7rem;
+    padding-top: 4px;
+}
+
+form button {
+    align-self: flex-end;
+    font-family: inherit;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 1px solid #e66465;
+    padding: 0.5em;
+    background: transparent;
+    color: white;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+form button::after {
+    content: "";
+    padding: 0.5em;
+    background-color: #e66465;
+    position: absolute;
+    z-index: -1;
+    padding: 1em 2em;
+    display: block;
+}
+
+form button.slide-from-left::after {
+    left: -100%;
+    right: 100%;
+    top: 0;
+    bottom: 0;
 }
 
 /* Footer */
@@ -254,31 +332,12 @@ ul li:hover:after {
     align-items: center;
     background-color: #2e303d;
     text-transform: uppercase;
-    gap: 1em;
-    padding: 3em;
+    gap: 2em;
+    padding: 1.5em;
 }
 
 .footer p {
     font-size: 0.8rem;
-}
-
-#toTop {
-    font-family: inherit;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    border: none;
-    padding: 0.25em;
-    background: linear-gradient(to bottom, #e66465, #9198e5);
-    color: white;
-    text-align: center;
-    transition: all 0.5s;
-    cursor: pointer;
-    position: absolute;
-    top: -25px;
-}
-
-#toTop:hover {
-    top: -30px;
 }
 
 .footer-icons {
@@ -295,4 +354,12 @@ ul li:hover:after {
 .footer-icons img:hover {
     cursor: pointer;
     filter: brightness(150%);
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
 }
