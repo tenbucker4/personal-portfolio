@@ -44,7 +44,7 @@ ul a {
     height: 100%;
 }
 
-/* First body section */
+/* Home page */
 .greeting {
     background-color: #1c1d25;
     height: 100vh;
@@ -99,11 +99,11 @@ ul a {
 
 .greeting button, 
 .icons img {
-    animation: fadeIn ease-in-out 3s;
-    -webkit-animation: fadeIn ease-in-out 3s;
-    -moz-animation: fadeIn ease-in-out 3s;
-    -o-animation: fadeIn ease-in-out 3s;
-    -ms-animation: fadeIn ease-in-out 3s;
+    animation: fadeIn ease-in-out 2s;
+    -webkit-animation: fadeIn ease-in-out 2s;
+    -moz-animation: fadeIn ease-in-out 2s;
+    -o-animation: fadeIn ease-in-out 2s;
+    -ms-animation: fadeIn ease-in-out 2s;
 }
 
 .greeting button {
@@ -219,9 +219,9 @@ ul li:hover:after {
 /* Projects */
 #projects {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: fit-content;
     background-color: #1c1d25;
     color: white;
 }
@@ -229,7 +229,78 @@ ul li:hover:after {
 section h1 {
     font-size: 2.5rem;
     text-decoration: underline 4px solid #e66465;
+    padding-top: 96px;
+    padding-bottom: 64px;
 }
+
+.project-container {
+    display: flex;
+    width: 90%;
+}
+
+.project-left {
+    width: 60%;
+}
+
+.project-left img {
+    width: 100%;
+    height: auto;
+}
+
+.project-right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-right button {
+    font-family: inherit;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 1px solid #e66465;
+    padding: 0.5em;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-right button::after {
+    content: "";
+    padding: 0.5em;
+    position: absolute;
+    z-index: -1;
+    padding: 0.5em;
+    display: block;
+}
+
+.project-right button:hover {
+    background-color: #e66465;
+}
+
+.project-right button[class^="slide"]::after {
+    transition: all 0.35s;
+}
+
+.project-right button[class^="slide"]:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.35s;
+}
+
+.project-right button.slide-from-left::after {
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+  }
 
 /* About Me */
 #aboutMe {
@@ -363,3 +434,5 @@ form button.slide-from-left::after {
     align-items: center;
     gap: 4px;
 }
+
+/* BUTTONS */
