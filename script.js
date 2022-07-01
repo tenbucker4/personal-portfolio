@@ -1,6 +1,6 @@
 // Super cool particles dancing on page
 const canvas = document.getElementById("canvas1");
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -9,15 +9,13 @@ let particleArray;
 let mouse = {
     x: null,
     y: null,
-    radius: (canvas.height/95) * (canvas.width/95)
-}
+    radius: (canvas.height / 95) * (canvas.width / 95),
+};
 
-window.addEventListener('mousemove', 
-    function(event) {
-        mouse.x = event.x;
-        mouse.y = event.y;
-    }
-)
+window.addEventListener("mousemove", function (event) {
+    mouse.x = event.x;
+    mouse.y = event.y;
+});
 
 class Particle {
     constructor(x, y, directionX, directionY, size, color) {
@@ -32,7 +30,7 @@ class Particle {
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-        ctx.fillStyle = '#e66465';
+        ctx.fillStyle = "#e66465";
         ctx.fill();
     }
     // move and draw particle after checking particle and mouse positions
@@ -47,7 +45,7 @@ class Particle {
         //check if particles have collided
         let dx = mouse.x - this.x;
         let dy = mouse.y - this.y;
-        let distance = Math.sqrt(dx*dx + dy*dy);
+        let distance = Math.sqrt(dx * dx + dy * dy);
         if (distance < mouse.radius + this.size) {
             if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
                 this.x += 5;
@@ -72,21 +70,25 @@ class Particle {
     }
 }
 
+// Fill page with particles
 function populate() {
     particleArray = [];
     let numberOfParticles = (canvas.height * canvas.width) / 12000;
     for (let i = 0; i < numberOfParticles; i++) {
-        let size = (Math.random() * 2) + 1;
-        let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
-        let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
-        let directionX = (Math.random() * 5) - 2.5;
-        let directionY = (Math.random() * 5) - 2.5;
-        let color = '#e66465';
+        let size = Math.random() * 2 + 1;
+        let x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
+        let y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
+        let directionX = Math.random() * 5 - 2.5;
+        let directionY = Math.random() * 5 - 2.5;
+        let color = "#e66465";
 
-        particleArray.push(new Particle(x, y, directionX, directionY, size, color));
+        particleArray.push(
+            new Particle(x, y, directionX, directionY, size, color)
+        );
     }
 }
 
+// Animate particles
 function animate() {
     requestAnimationFrame(animate);
     ctx.clearRect(0, 0, innerWidth, innerHeight);
@@ -97,15 +99,19 @@ function animate() {
     connect();
 }
 
+// Form lines that connect particles when they're within a certain distance to each other
 function connect() {
     let opacity = 1;
     for (let a = 0; a < particleArray.length; a++) {
         for (let b = a; b < particleArray.length; b++) {
-            let distance = ((particleArray[a].x - particleArray[b].x) * (particleArray[a].x - particleArray[b].x))
-            + ((particleArray[a].y - particleArray[b].y) * (particleArray[a].y - particleArray[b].y));
-            if (distance < (canvas.width/7) * (canvas.height/7)) {
-                opacity = 1 - (distance/20000);
-                ctx.strokeStyle = 'rgba(145, 152, 229,' + opacity + ')';
+            let distance =
+                (particleArray[a].x - particleArray[b].x) *
+                    (particleArray[a].x - particleArray[b].x) +
+                (particleArray[a].y - particleArray[b].y) *
+                    (particleArray[a].y - particleArray[b].y);
+            if (distance < (canvas.width / 7) * (canvas.height / 7)) {
+                opacity = 1 - distance / 20000;
+                ctx.strokeStyle = "rgba(145, 152, 229," + opacity + ")";
                 ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(particleArray[a].x, particleArray[a].y);
@@ -116,73 +122,61 @@ function connect() {
     }
 }
 
-//Window resize
-window.addEventListener('resize',
-    function() {
-        canvas.width = innerWidth;
-        canvas.height = innerHeight;
-        mouse.radius = ((canvas.height/95) * (canvas.width/95));
-        populate();
-    }
-)
+// Reformat particles on window resize
+window.addEventListener("resize", function () {
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
+    mouse.radius = (canvas.height / 95) * (canvas.width / 95);
+    populate();
+});
 
-window.addEventListener('mouseout',
-    function() {
-        mouse.x = undefined;
-        mouse.y = undefined;
-    }
-)
+window.addEventListener("mouseout", function () {
+    mouse.x = undefined;
+    mouse.y = undefined;
+});
 
 populate();
 animate();
 
+// Buttons and links
+const viewWork = document.getElementById("viewWork");
+viewWork.addEventListener("click", function () {
+    document.getElementById("projects").scrollIntoView();
+});
 
-// Buttons and stuff!
-const viewWork = document.getElementById('viewWork');
-viewWork.addEventListener('click', function() {
-    document.getElementById('projects').scrollIntoView();
-})
-
-const toHome = document.getElementById('homeLink');
-toHome.addEventListener('click', function() {
+const toHome = document.getElementById("homeLink");
+toHome.addEventListener("click", function () {
     window.scrollTo(0, 0);
-})
+});
 
-const toProjects = document.getElementById('projectsLink');
-toProjects.addEventListener('click', function() {
-    document.getElementById('projects').scrollIntoView();
-})
+const toProjects = document.getElementById("projectsLink");
+toProjects.addEventListener("click", function () {
+    document.getElementById("projects").scrollIntoView();
+});
 
-const toAboutMe = document.getElementById('aboutMeLink');
-toAboutMe.addEventListener('click', function() {
-    document.getElementById('aboutMe').scrollIntoView();
-})
+const toAboutMe = document.getElementById("aboutMeLink");
+toAboutMe.addEventListener("click", function () {
+    document.getElementById("aboutMe").scrollIntoView();
+});
 
-const toContactMe = document.getElementById('contactMeLink');
-toContactMe.addEventListener('click', function() {
-    document.getElementById('contactMe').scrollIntoView();
-})
+const toContactMe = document.getElementById("contactMeLink");
+toContactMe.addEventListener("click", function () {
+    document.getElementById("contactMe").scrollIntoView();
+});
 
-//Nav bar tracking of current section
-const sections = document.querySelectorAll('section');
-const navLi = document.querySelectorAll('.nav ul li');
+// Nav bar tracking of current section - MORE TO ADD HERE
+const sections = document.querySelectorAll("section");
+const navLi = document.querySelectorAll(".nav ul li");
 
-window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= sectionTop) {
-            current = section.getAttribute('id');
-        }
-    })
+window.addEventListener("scroll", () => {});
 
-    navLi.forEach(li => {
-        li.classList.remove('active');
-        if (li.classList.contains(current)) {
-            li.classList.add('active');
-        }
-        console.log(li.classList);
-    })
-
-})
+// IMPORTANT - THIS RETURNS TRUE IF ELEMENT IS IN VIEW
+// function isInViewport(element) {
+//     const rect = element.getBoundingClientRect();
+//     return (
+//         rect.top >= 0 &&
+//         rect.left >= 0 &&
+//         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+//         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+//     );
+// }
