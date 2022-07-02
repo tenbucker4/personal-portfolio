@@ -258,6 +258,7 @@ section h1 {
 .project-container {
     display: flex;
     width: 90%;
+    padding-bottom: 8rem;
 }
 
 .project-left {
