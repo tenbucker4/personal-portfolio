@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e, 2022-07-14)"
+   sodipodi:docname="avatar2.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.4204826"
+     inkscape:cx="327.00521"
+     inkscape:cy="491.10236"
+     inkscape:window-width="1399"
+     inkscape:window-height="763"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect5860"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect5032"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect5028"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect5024"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:none;stroke:#e66465;stroke-width:3.94564962;stroke-dasharray:none;stroke-opacity:1"
+       id="path111"
+       cx="107.26134"
+       cy="119.272"
+       rx="48.927429"
+       ry="54.887218" />
+    <path
+       style="fill:none;stroke:#e66465;stroke-width:3.9456346;stroke-dasharray:none;stroke-opacity:1"
+       d="m 124.19776,179.05156 c 0,0 32.6183,26.85969 37.63649,26.85969 5.01819,0 22.58189,2.33564 27.60007,4.67127 5.0182,2.33561 15.05461,47.88033 10.03642,50.21596"
+       id="path4853" />
+    <path
+       style="fill:none;stroke:#e66465;stroke-width:1.48701856;stroke-dasharray:none;stroke-opacity:1"
+       d="m 97.806682,88.072723 c 0,0 -12.16785,10.22696 -14.03982,10.22696 -1.87198,0 -8.42389,0.88929 -10.29587,1.778597 -1.87197,0.88929 -5.61593,18.23064 -3.74395,19.11995"
+       id="path4853-2"
+       class="UnoptimicedTransforms"
+       transform="matrix(2.8196054,0,0,2.6246653,-183.79414,-51.812634)" />
+    <path
+       style="fill:none;stroke:#e66465;stroke-width:3.89082027;stroke-dasharray:none;stroke-opacity:1"
+       d="m 12.229214,260.5774 c 62.623656,0 125.246586,0 187.868776,0"
+       id="path5026"
+       inkscape:path-effect="#path-effect5028"
+       inkscape:original-d="m 12.229214,260.5774 c 62.623656,7.1e-4 125.246586,7.1e-4 187.868776,0" />
+  </g>
+</svg>
