@@ -164,6 +164,17 @@ toContactMe.addEventListener("click", function () {
     document.getElementById("contactMe").scrollIntoView();
 });
 
+const sendEmail = (document.getElementById("send-email").onclick = function (
+    e
+) {
+    e.preventDefault();
+    let subject = document.getElementById("subject").value;
+    let body = document.getElementById("contact-message").value;
+    window.open(
+        "mailto:bwtucker4@gmail.com?subject=" + subject + "&body=" + body
+    );
+});
+
 // Nav bar tracking of current section - MORE TO ADD HERE
 const sections = document.querySelectorAll("section");
 const navLi = document.querySelectorAll(".nav ul li");
