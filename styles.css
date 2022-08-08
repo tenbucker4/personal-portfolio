@@ -79,6 +79,7 @@ ul a {
     -ms-animation: fadeIn ease-in-out 3s;
 }
 
+/* Greeting animation */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -255,7 +256,7 @@ ul li:hover:after {
 section h1 {
     font-size: 2.5rem;
     text-decoration: underline 4px solid var(--pinky-red);
-    padding-top: 4rem;
+    padding-top: 5rem;
     padding-bottom: 2rem;
 }
 
