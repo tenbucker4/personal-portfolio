@@ -63,8 +63,8 @@ class Particle {
             this.directionY = -this.directionY;
         }
         // move particle
-        this.x += 0.3 * this.directionX;
-        this.y += 0.3 * this.directionY;
+        this.x += 0.15 * this.directionX;
+        this.y += 0.15 * this.directionY;
         // draw particle
         this.draw();
     }
