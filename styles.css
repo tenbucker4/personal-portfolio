@@ -264,15 +264,32 @@ section h1 {
     display: flex;
     width: 90%;
     padding-bottom: 8rem;
+    gap: 2rem;
+    justify-content: center;
 }
 
 .project-left {
     width: 60%;
+    max-width: 560px;
+    position: relative;
 }
 
 .project-left img {
     width: 100%;
     height: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.project-background {
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(145, 152, 229);
+    z-index: 1;
+    opacity: 50%;
 }
 
 .project-right {
@@ -341,7 +358,6 @@ section h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
     background-color: #1c1d25;
     color: white;
 }
@@ -407,6 +423,7 @@ svg {
     background-color: #1c1d25;
     color: #f3f3f3;
     gap: 32px;
+    padding-bottom: 3rem;
 }
 
 #contactMe p {
@@ -443,6 +460,8 @@ form textarea {
     height: 7rem;
     padding-top: 4px;
 }
+
+/* BUTTONS */
 
 form button {
     align-self: flex-end;
@@ -518,5 +537,3 @@ form button.slide-from-left::after {
     align-items: center;
     gap: 4px;
 }
-
-/* BUTTONS */
