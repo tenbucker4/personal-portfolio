@@ -154,7 +154,7 @@ ul a {
     background-color: var(--pinky-red);
     position: absolute;
     z-index: -1;
-    padding: 1em 2em;
+    padding: 1rem 2rem;
     display: block;
 }
 
@@ -256,7 +256,7 @@ ul li:hover:after {
 
 section h1 {
     font-size: 2.5rem;
-    text-decoration: underline 4px solid var(--pinky-red);
+    text-decoration: underline 6px solid var(--pinky-red);
     padding-top: 5rem;
     padding-bottom: 2rem;
 }
@@ -279,6 +279,7 @@ section h1 {
     height: auto;
     position: relative;
     z-index: 10;
+    box-shadow: 8px 0 8px 0 hsl(0deg 0% 0% / 20%);
 }
 
 .project-background {
@@ -552,4 +553,33 @@ form button.slide-from-left::after {
     justify-content: center;
     align-items: center;
     gap: 4px;
+}
+
+@media (max-width: 700px) {
+    .greeting h1 {
+        font-size: 2rem;
+    }
+
+    .greeting h2 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .greeting button {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav {
+        justify-content: center;
+        padding: 1rem 0.25rem;
+    }
+
+    .nav ul {
+        padding-right: 0;
+        font-size: 0.7rem;
+    }
+
+    section h1 {
+        font-size: 2rem;
+    }
 }
