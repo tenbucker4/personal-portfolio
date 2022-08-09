@@ -9,6 +9,7 @@
 
 :root {
     --pinky-red: #e66465;
+    --background-blue: #1c1d25;
 }
 
 html {
@@ -53,7 +54,7 @@ ul a {
 
 /* Home page */
 .greeting {
-    background-color: #1c1d25;
+    background-color: var(--background-blue);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -249,7 +250,7 @@ ul li:hover:after {
     flex-direction: column;
     align-items: center;
     height: fit-content;
-    background-color: #1c1d25;
+    background-color: var(--background-blue);
     color: white;
     gap: 3rem;
 }
@@ -258,7 +259,6 @@ section h1 {
     font-size: 2.5rem;
     text-decoration: underline 6px solid var(--pinky-red);
     padding-top: 5rem;
-    padding-bottom: 2rem;
 }
 
 .project-container {
@@ -371,7 +371,7 @@ section h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #1c1d25;
+    background-color: var(--background-blue);
     color: white;
 }
 
@@ -438,7 +438,7 @@ svg {
     justify-content: flex-start;
     align-items: center;
     height: fit-content;
-    background-color: #1c1d25;
+    background-color: var(--background-blue);
     color: #f3f3f3;
     gap: 32px;
     padding-bottom: 3rem;
@@ -610,5 +610,44 @@ form button.slide-from-left::after {
     #project-title,
     #project-description {
         font-size: small;
+    }
+
+    .about-me-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    svg {
+        width: 10rem;
+    }
+
+    .avatar-bin {
+        width: 80%;
+    }
+
+    .avatar-bin p {
+        font-size: 0.7rem;
+        padding-bottom: 2rem;
+    }
+
+    .skill-entry p {
+        font-size: 0.6rem;
+    }
+
+    .skill {
+        width: 3.5rem;
+    }
+
+    #contactMe p {
+        font-size: 0.8rem;
+    }
+
+    #contactMe button {
+        font-size: 0.8rem;
+    }
+
+    #contactMe input,
+    #contactMe textarea {
+        font-size: 0.75rem;
     }
 }
