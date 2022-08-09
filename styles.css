@@ -251,6 +251,7 @@ ul li:hover:after {
     height: fit-content;
     background-color: #1c1d25;
     color: white;
+    gap: 3rem;
 }
 
 section h1 {
@@ -263,7 +264,6 @@ section h1 {
 .project-container {
     display: flex;
     width: 90%;
-    padding-bottom: 8rem;
     gap: 2rem;
     justify-content: center;
 }
@@ -301,10 +301,18 @@ section h1 {
     gap: 12px;
 }
 
-#project-name,
-#project-title {
+#project-name {
     font-weight: bold;
     font-size: 1.5rem;
+}
+
+#project-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#project-description {
+    font-size: 0.9rem;
 }
 
 .project-right button {
@@ -390,8 +398,14 @@ svg {
 .skills-bin {
     width: 40%;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
+}
+
+.skills-row {
+    display: flex;
 }
 
 .skill-entry {
@@ -399,8 +413,7 @@ svg {
     width: fit-content;
     flex-direction: column;
     align-items: center;
-    border: 2px solid var(--pinky-red);
-    border-radius: 5px;
+    justify-content: center;
 }
 
 .skill-entry p {
@@ -427,8 +440,9 @@ svg {
 }
 
 #contactMe p {
-    width: 500px;
+    width: 90%;
     text-align: center;
+    max-width: 525px;
 }
 
 form {
@@ -437,11 +451,13 @@ form {
     justify-content: center;
     align-items: center;
     gap: 8px;
+    width: 90%;
+    max-width: 525px;
 }
 
 form input,
 form textarea {
-    width: 500px;
+    width: 100%;
     background-color: #2e303d;
     border: none;
     resize: none;
