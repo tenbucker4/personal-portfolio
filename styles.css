@@ -395,7 +395,7 @@ svg {
 }
 
 .avatar-bin p {
-    text-align: justify;
+    width: 90%;
 }
 
 .skills-bin {
