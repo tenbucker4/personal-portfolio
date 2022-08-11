@@ -137,7 +137,6 @@ ul a {
 
 .greeting button {
     font-family: inherit;
-    border-radius: 5px;
     font-size: 1rem;
     border: 1px solid var(--pinky-red);
     padding: 1em 2em;
@@ -323,7 +322,6 @@ section h1 {
 
 .project-right button {
     font-family: inherit;
-    border-radius: 5px;
     font-size: 0.75rem;
     border: 1px solid var(--pinky-red);
     padding: 0.5rem 1rem;
@@ -487,7 +485,6 @@ form textarea {
 form button {
     align-self: flex-end;
     font-family: inherit;
-    border-radius: 5px;
     font-size: 1rem;
     border: 1px solid var(--pinky-red);
     padding: 0.5em;
