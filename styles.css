@@ -281,10 +281,6 @@ section h1 {
     box-shadow: 8px 0 8px 0 hsl(0deg 0% 0% / 20%);
 }
 
-.coming-soon {
-    filter: blur(2px);
-}
-
 .project-background {
     position: absolute;
     top: 4%;
