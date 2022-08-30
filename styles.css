@@ -275,10 +275,14 @@ section h1 {
 
 .project-left img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 4.5 / 3;
     position: relative;
     z-index: 2;
     box-shadow: 8px 0 8px 0 hsl(0deg 0% 0% / 20%);
+}
+
+.coming-soon {
+    filter: blur(1.5px);
 }
 
 .project-background {
