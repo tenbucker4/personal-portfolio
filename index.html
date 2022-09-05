@@ -7,16 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Ben Tucker | Frontend Developer</title>
 </head>
 
 <body>
     <canvas id="canvas1"></canvas>
     <div class="greeting">
-            <h1>Hi, I'm <span style="color: #e66465">Ben</span>.</h1>
-            <h2>I'm a front-end software developer.</h2>
-            <button class="slide-from-top" id="viewWork">See my work</button>
-            <div class="icons">
+            <h1 data-aos="fade-right">Hi, I'm <span style="color: #e66465">Ben</span>.</h1>
+            <h2 data-aos="fade-left">I'm a software developer.</h2>
+            <button data-aos="fade-up" data-aos-delay="500" class="slide-from-top" id="viewWork">See my work</button>
+            <div data-aos="fade-up" data-aos-delay="500" class="icons">
                 <a href="https://github.com/tenbucker4" target="_blank"><img src="./images/github.png" alt="github"></a>
                 <a href="https://www.linkedin.com/in/ben-tucker-6a520911a/" target="_blank"><img src="./images/linkedin.png" alt="linkedin"></a>
                 <a href="./images/Ben-Tucker-Resume.pdf" target="_blank" download><img src="./images/resume-icon.png" alt="download-cv"></a>
@@ -32,7 +33,7 @@
     </div>
     <section id="projects">
         <h1>Projects</h1>
-        <div class="project-container">
+        <div class="project-container" data-aos="slide-left">
             <div class="project-left">
                 <img class="coming-soon" src="./images/trek.jpg" alt="trek-app-image">
                 <div class="project-background"></div>
@@ -45,7 +46,7 @@
                     Built in ReactJS, MongoDB, Express, and NodeJS.</div>
             </div>
         </div>
-        <div class="project-container">
+        <div class="project-container even" data-aos="slide-right">
             <div class="project-left">
                 <img src="./images/omicron.jpeg" alt="omicron-site-image">
                 <div class="project-background"></div>
@@ -60,7 +61,7 @@
                 </div>
             </div>
         </div>
-        <div class="project-container">
+        <div class="project-container" data-aos="slide-left">
             <div class="project-left">
                 <img src="./images/the-range.jpg" alt="the-range-app-image">
                 <div class="project-background"></div>
@@ -75,7 +76,7 @@
                 </div>
             </div>
         </div>
-        <div class="project-container">
+        <div class="project-container even" data-aos="slide-right">
             <div class="project-left">
                 <img src="./images/employable.jpg" alt="employable-app-image">
                 <div class="project-background"></div>
@@ -90,7 +91,7 @@
                 </div>
             </div>
         </div>
-        <div class="project-container"  id="second-project">
+        <div class="project-container" data-aos="slide-left">
             <div class="project-left">
                 <img src="./images/Pronto.jpg" alt="pronto-app-image">
                 <div class="project-background"></div>
@@ -105,7 +106,7 @@
                 </div>
             </div>
         </div>
-        <div class="project-container" id="third-project">
+        <div class="project-container even" data-aos="slide-right">
             <div class="project-left">
                 <img src="./images/beyond.jpg" alt="beyond-app-image">
                 <div class="project-background"></div>
@@ -124,7 +125,7 @@
     <section id="aboutMe">
         <h1>About Me</h1>
         <div class="about-me-container">
-            <div class="avatar-bin">
+            <div data-aos="fade-in" class="avatar-bin">
                 <svg
                 width="210mm"
                 height="297mm"
@@ -233,13 +234,12 @@
                     inkscape:original-d="m 12.229214,260.5774 c 62.623656,7.1e-4 125.246586,7.1e-4 187.868776,0" />
                </g>
                 </svg>
-                <p>I'm a chemist (Bachelor & Master of Science) with a passion for solving meaningful, complex problems.
-                     After working as a chemist, I discovered the world of software development. I became fascinated with the combination of logic,
-                      creativity, and constant new technologies that promote a mentality of lifelong learning. Since then I've been working hard to
-                       learn all I can about front-end development, UI/UX design, and writing clean code. When I'm away from my computer, I love playing
-                        basketball, golf, video games, and spending time with family and friends.</p>
+                <p>I'm a scientist and software developer with a passion for solving meaningful, complex problems.
+                     Since discovering web development, I've become fascinated with the combination of logic,
+                      creativity, and constant new technologies that promote a mentality of lifelong learning.
+                       When I'm away from my computer, I love playing basketball, golf, video games, and spending time with family and friends.</p>
             </div>
-            <div class="skills-bin">
+            <div class="skills-bin" data-aos="fade-in">
                 <div class="skills-row">
                     <div class="skill-entry">
                         <img class="skill" src="./images/icons8-html.png" alt="html">
@@ -286,8 +286,14 @@
             <p>Ben Tucker @2022</p>
             <!-- <p><a target="_blank" href="https://icons8.com/icon/20906/git">Tech</a> icons by <a target="_blank" href="https://icons8.com">Icons8</a></p> -->
         </div>
-        
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 600,
+      });
+    </script>
 </body>
 
 </html>
